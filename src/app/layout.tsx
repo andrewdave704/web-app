@@ -5,8 +5,8 @@ import "./globals.css";
 const dm_sans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Eyezy Clone - Phone Monitoring App Design Reference",
-  description: "A design clone of Eyezy phone monitoring app for reference purposes",
+  title: "Eyezy - Phone Monitoring App Design Reference",
+  description: "Eyezy phone monitoring software",
 };
 
 export default function RootLayout({
