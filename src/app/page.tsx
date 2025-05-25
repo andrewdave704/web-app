@@ -328,9 +328,12 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="bg-eyezy-coral hover:bg-eyezy-coral text-white font-semibold px-8 py-3">
-              Try now
-            </Button>
+            <Link href="/step-1-create-account">
+
+              <Button size="lg" className="bg-eyezy-coral hover:bg-eyezy-coral text-white font-semibold px-8 py-3">
+                Try now
+              </Button>
+            </Link>
             <Button
               size="lg"
               variant="outline"
@@ -441,9 +444,12 @@ export default function Home() {
               Just log in from any browser. Easy as that.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button size="lg" className="bg-eyezy-coral hover:bg-eyezy-coral text-white font-semibold px-8 py-3">
-                Get started
-              </Button>
+              <Link href="/step-1-create-account">
+
+                <Button size="lg" className="bg-eyezy-coral hover:bg-eyezy-coral text-white font-semibold px-8 py-3">
+                  Get started
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
