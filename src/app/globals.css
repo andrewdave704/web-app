@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 83% 53%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
+    /* Eyezy Custom Colors */
+    --eyezy-dark-blue: 230 92% 9%;
+    --eyezy-blue: 240 73% 29%;
+    --eyezy-bright-blue: 239 83% 53%;
+    --eyezy-coral: 1 69% 65%;
+    --eyezy-light-blue: 201 90% 66%;
+  }
+
+  .dark {
+    --background: 230 92% 9%;
+    --foreground: 210 40% 98%;
+    --card: 240 73% 29%;
+    --card-foreground: 210 40% 98%;
+    --popover: 230 92% 9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 239 83% 53%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 240 73% 29%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 240 73% 29%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 240 73% 29%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 240 73% 29%;
+    --input: 240 73% 29%;
+    --ring: 239 83% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Eyezy Styles */
+.eyezy-gradient {
+  background: linear-gradient(135deg, #05052b 0%, #1c1f72 50%, #3c3bcf 100%);
+}
+
+.eyezy-blue-gradient {
+  background: linear-gradient(135deg, #1c1f72 0%, #3c3bcf 100%);
+}
+
+.eyezy-card-gradient {
+  background: linear-gradient(135deg, rgba(60, 59, 207, 0.1) 0%, rgba(28, 31, 114, 0.2) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(60, 59, 207, 0.2);
+}
+
+.text-eyezy-coral {
+  color: #d9696e;
+}
+
+.bg-eyezy-coral {
+  background-color: #d9696e;
+}
+
+.hover\:bg-eyezy-coral:hover {
+  background-color: #c55a60;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
