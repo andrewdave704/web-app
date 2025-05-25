@@ -75,7 +75,7 @@ export default function Step1CreateAccount() {
                         <Input
                           type="email"
                           placeholder="Enter your email address"
-                          className="bg-white border-white/20 text-white placeholder-white/60"
+                          className="bg-white border-white/20 text-black placeholder-white/60"
                         />
                       </div>
 
