@@ -8,7 +8,7 @@ import Link from "next/link"
 export default function Step3ChoosePlan() {
   const handlePlanSelection = () => {
     // Redirect to WhatsApp
-    const phoneNumber = "16232217458"
+    const phoneNumber = "19847428400"
     const message = "Hi! I'm interested in Eyezy phone monitoring software. Can you help me get started?"
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
@@ -95,7 +95,7 @@ export default function Step3ChoosePlan() {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-white mb-2">$84.99</div>
+                    <div className="text-4xl font-bold text-white mb-2">$104.99</div>
                     <p className="text-blue-200">1 month</p>
                   </div>
 
@@ -142,7 +142,7 @@ Invisible mode</span>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-white mb-2">$149.99</div>
+                    <div className="text-4xl font-bold text-white mb-2">$199.99</div>
                     <p className="text-blue-200">2 months</p>
                   </div>
 
@@ -184,7 +184,7 @@ Invisible mode</span>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-white mb-2">$249.99</div>
+                    <div className="text-4xl font-bold text-white mb-2">$349.99</div>
                     <p className="text-blue-200">3 months</p>
                   </div>
 
