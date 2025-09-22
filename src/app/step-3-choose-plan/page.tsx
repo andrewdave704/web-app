@@ -95,7 +95,7 @@ export default function Step3ChoosePlan() {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-white mb-2">$104.99</div>
+                    <div className="text-4xl font-bold text-white mb-2">$250</div>
                     <p className="text-blue-200">1 month</p>
                   </div>
 
@@ -142,7 +142,7 @@ Invisible mode</span>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-white mb-2">$199.99</div>
+                    <div className="text-4xl font-bold text-white mb-2">$450</div>
                     <p className="text-blue-200">2 months</p>
                   </div>
 
@@ -184,7 +184,7 @@ Invisible mode</span>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-white mb-2">$349.99</div>
+                    <div className="text-4xl font-bold text-white mb-2">$700</div>
                     <p className="text-blue-200">3 months</p>
                   </div>
 
