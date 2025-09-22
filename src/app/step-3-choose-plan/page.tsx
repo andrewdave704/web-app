@@ -8,7 +8,7 @@ import Link from "next/link"
 export default function Step3ChoosePlan() {
   const handlePlanSelection = () => {
     // Redirect to WhatsApp
-    const phoneNumber = "19847428400"
+    const phoneNumber = "17164654354"
     const message = "Hi! I'm interested in Eyezy phone monitoring software. Can you help me get started?"
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
