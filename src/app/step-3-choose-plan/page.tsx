@@ -264,7 +264,7 @@ Invisible mode</span>
                 variant="outline"
                 className="border-white/30 text-white hover:bg-white/10"
               >
-                Contact Us on WhatsApp
+                Contact Us on Telegram
               </Button>
             </div>
           </div>
