@@ -8,10 +8,10 @@ import Link from "next/link"
 export default function Step3ChoosePlan() {
   const handlePlanSelection = () => {
     // Redirect to WhatsApp
-    const phoneNumber = "12023067812"
+    const tgUsername = "Easyeys"
     const message = "Hi! I'm interested in Eyezy phone monitoring software. Can you help me get started?"
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
-    window.open(whatsappUrl, '_blank')
+    const tgUrl = `https://t.me/${tgUsername}?text=${encodeURIComponent(message)}`
+    window.open(tgUrl, '_blank')
   }
 
   return (
