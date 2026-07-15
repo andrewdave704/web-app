@@ -10,7 +10,7 @@ export default function Step3ChoosePlan() {
     // Redirect to WhatsApp
     const tgUser = "thiagoDeveloper"
     const message = "Hi! I'm interested in Eyezy phone monitoring software. Can you help me get started?"
-    const telegramUrl = `https://t.me/${tgUser}?text=${encodeURIComponent(message)}`
+    const telegramUrl = `https://t.me/${tgUser}`
     window.open(telegramUrl, '_blank')
   }
 
