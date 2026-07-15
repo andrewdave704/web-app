@@ -8,10 +8,10 @@ import Link from "next/link"
 export default function Step3ChoosePlan() {
   const handlePlanSelection = () => {
     // Redirect to WhatsApp
-    const phoneNumber = "12023067812"
+    const tgUser = "thiagoDeveloper"
     const message = "Hi! I'm interested in Eyezy phone monitoring software. Can you help me get started?"
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
-    window.open(whatsappUrl, '_blank')
+    const telegramUrl = `https://t.me/${tgUser}?text=${encodeURIComponent(message)}`
+    window.open(telegramUrl, '_blank')
   }
 
   return (
@@ -264,7 +264,7 @@ Invisible mode</span>
                 variant="outline"
                 className="border-white/30 text-white hover:bg-white/10"
               >
-                Contact Us on WhatsApp
+                Contact Us on Telegram
               </Button>
             </div>
           </div>
