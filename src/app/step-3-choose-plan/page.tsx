@@ -1,3 +1,14 @@
+Here is the corrected code.
+
+### What Was Fixed:
+
+1. **Removed Global `window.open` During Server-Side Rendering (SSR):** In Next.js (especially in App Router `"use client"` components), using `window` directly inside a component's body or in general functions without ensuring it's running in the browser can lead to hydration/build errors. The trigger is safe because it's inside `onClick`, but to make it resilient and type-safe, we can explicitly handle it.
+2. **Fixed Broken Text Layouts:** There were several accidental line breaks inside JSX elements (e.g., `Includes all premium features\n` and `Invisible mode\n` spanning multiple lines before closing tags). These cause awkward spacing in the rendered text.
+3. **Corrected Custom Tailwind Classes:** The button in the **Premium** card had `bg-eyezy-coral hover:bg-eyezy-coral`. Unless you have specifically configured `eyezy-coral` in your `tailwind.config.js`, this will render without a background color. It has been updated to use standard Tailwind classes matching your scheme (`bg-orange-600 hover:bg-orange-700` to match the orange theme of that card), but you can easily change it back if your config supports it.
+
+Here is your fully clean, corrected code:
+
+```tsx
 "use client"
 
 import { Button } from "@/components/ui/button"
@@ -7,11 +18,12 @@ import Link from "next/link"
 
 export default function Step3ChoosePlan() {
   const handlePlanSelection = () => {
-    // Redirect to WhatsApp
-    const tgUser = "thiagoDeveloper"
-    const message = "Hi! I'm interested in Eyezy phone monitoring software. Can you help me get started?"
-    const telegramUrl = `https://t.me/${tgUser}`
-    window.open(telegramUrl, '_blank')
+    if (typeof window !== "undefined") {
+      const tgUser = "thiagoDeveloper"
+      const message = "Hi! I'm interested in Eyezy phone monitoring software. Can you help me get started?"
+      const telegramUrl = `https://t.me/${tgUser}?text=${encodeURIComponent(message)}`
+      window.open(telegramUrl, '_blank', 'noopener,noreferrer')
+    }
   }
 
   return (
@@ -102,8 +114,7 @@ export default function Step3ChoosePlan() {
                   <div className="space-y-3">
                     <div className="flex items-center text-white">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span>Includes all premium features
-</span>
+                      <span>Includes all premium features</span>
                     </div>
                     <div className="flex items-center text-white">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
@@ -111,10 +122,8 @@ export default function Step3ChoosePlan() {
                     </div>
                     <div className="flex items-center text-white">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span>
-Invisible mode</span>
+                      <span>Invisible mode</span>
                     </div>
-              
                   </div>
 
                   <Button
@@ -129,7 +138,7 @@ Invisible mode</span>
               {/* Premium Plan */}
               <Card className="eyezy-card-gradient border-orange-400/50 relative transform scale-105">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-bold">
+                  <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-bold whitespace-nowrap">
                     MOST POPULAR
                   </span>
                 </div>
@@ -146,11 +155,10 @@ Invisible mode</span>
                     <p className="text-blue-200">2 months</p>
                   </div>
 
-                     <div className="space-y-3">
+                  <div className="space-y-3">
                     <div className="flex items-center text-white">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span>Includes all premium features
-</span>
+                      <span>Includes all premium features</span>
                     </div>
                     <div className="flex items-center text-white">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
@@ -158,15 +166,13 @@ Invisible mode</span>
                     </div>
                     <div className="flex items-center text-white">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span>
-Invisible mode</span>
+                      <span>Invisible mode</span>
                     </div>
-              
                   </div>
 
                   <Button
                     onClick={handlePlanSelection}
-                    className="w-full bg-eyezy-coral hover:bg-eyezy-coral text-white font-semibold py-3"
+                    className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3"
                   >
                     Choose Premium Plan
                   </Button>
@@ -188,11 +194,10 @@ Invisible mode</span>
                     <p className="text-blue-200">3 months</p>
                   </div>
 
-                   <div className="space-y-3">
+                  <div className="space-y-3">
                     <div className="flex items-center text-white">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span>Includes all premium features
-</span>
+                      <span>Includes all premium features</span>
                     </div>
                     <div className="flex items-center text-white">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
@@ -200,10 +205,8 @@ Invisible mode</span>
                     </div>
                     <div className="flex items-center text-white">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span>
-Invisible mode</span>
+                      <span>Invisible mode</span>
                     </div>
-              
                   </div>
 
                   <Button
@@ -273,3 +276,5 @@ Invisible mode</span>
     </div>
   )
 }
+
+```
